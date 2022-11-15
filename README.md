@@ -6,6 +6,8 @@ The report will show all request groups, checks, HTTP metrics and other statisti
 
 Any HTTP metrics which have failed thresholds will be highlighted in red. Any group checks with more than 0 failures will also be shown in red.
 
+<a href="https://www.npmjs.com/package/k6-report-html" alt="Latest Stable Version">![npm](https://img.shields.io/npm/v/k6-report-html.svg)</a> <a href="https://www.npmjs.com/package/k6-report-html" alt="Total Downloads">![npm](https://img.shields.io/npm/dw/k6-report-html.svg)</a>
+
 # Npm Usage
 
 ```npm
