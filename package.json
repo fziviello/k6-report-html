@@ -1,6 +1,6 @@
 {
-  "name": "k6-report-html",
-  "version": "1.0.0",
+  "name": "@fziviello/k6-report-html",
+  "version": "1.0.1",
   "description": "Create Report html for k6",
   "repository": {
     "type": "git",

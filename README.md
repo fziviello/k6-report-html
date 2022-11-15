@@ -8,7 +8,7 @@ Any HTTP metrics which have failed thresholds will be highlighted in red. Any gr
 
 # Npm Usage
 
-```js
+```npm
 npm i k6-report-html
 ```
 
@@ -30,7 +30,7 @@ Then outside the test's default function, wrap it with the `handleSummary(data)`
 ```js
 export function handleSummary(data) {
   return {
-    "summary.html": reportHTML(data),
+    "reports/report.html": reportHTML(data),
   };
 }
 ```
@@ -54,7 +54,7 @@ import { textSummary } from "https://jslib.k6.io/k6-summary/0.0.1/index.js";
 
 export function handleSummary(data) {
   return {
-    "result.html": reportHTML(data),
+    "reports/report.html": reportHTML(data),
     stdout: textSummary(data, { indent: " ", enableColors: true }),
   };
 }
