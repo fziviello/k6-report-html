@@ -1,0 +1,25 @@
+{
+  "name": "k6-report-html",
+  "version": "1.0.0",
+  "description": "Create Report html for k6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fziviello/k6-report-html.git"
+  },
+  "keywords": [
+    "report",
+    "k6",
+    "html",
+    "json to html",
+    "k6 html reporter",
+    "k6 summary report"
+  ],
+  "author": "Fabio Ziviello",
+  "license": "MIT",
+  "homepage": "https://github.com/fziviello/k6-report-html"
+}
+
