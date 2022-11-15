@@ -1,0 +1,28 @@
+# Files
+*.log
+*.dex
+*.jks
+*.keystore
+*.DS_Store
+*._.DS_Store
+*.jtl
+*.log
+
+# Node directory
+node_modules
+*/node_modules
+/package-lock.json
+
+#exclude
+reports
+*/reports
+report.html
+.github
+*/.github
+test
+*/test
+webpack.config.js
+webpack.config.js
+_config.yml
+/src
+*/src
