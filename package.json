@@ -1,6 +1,6 @@
 {
   "name": "@fziviello/k6-report-html",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create Report html for k6",
   "repository": {
     "type": "git",
@@ -25,7 +25,6 @@
   "author": "Fabio Ziviello",
   "license": "MIT",
   "homepage": "https://github.com/fziviello/k6-report-html#readme",
-
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^7.22.0",
