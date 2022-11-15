@@ -5,7 +5,7 @@
 
 import ejs from "ejs/ejs.min.js";
 import template from "./template.ejs";
-const version = "1.0.0";
+const version = "2.0.0";
 
 export function reportHTML(data, opts = {}) {
   if (!opts.title) {

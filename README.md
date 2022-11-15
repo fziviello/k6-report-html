@@ -8,12 +8,6 @@ Any HTTP metrics which have failed thresholds will be highlighted in red. Any gr
 
 <a href="https://www.npmjs.com/package/k6-report-html" alt="Latest Stable Version">![npm](https://img.shields.io/npm/v/k6-report-html.svg)</a> <a href="https://www.npmjs.com/package/k6-report-html" alt="Total Downloads">![npm](https://img.shields.io/npm/dw/k6-report-html.svg)</a>
 
-# Npm Usage
-
-```npm
-npm i k6-report-html
-```
-
 # Locally Usage
 
 This extension to K6 is intended to be used by adding into your K6 test code (JavaScript) and utilizes the _handleSummary_ callback hook, added to K6 last version.
