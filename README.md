@@ -6,8 +6,13 @@ The report will show all request groups, checks, HTTP metrics and other statisti
 
 Any HTTP metrics which have failed thresholds will be highlighted in red. Any group checks with more than 0 failures will also be shown in red.
 
+# Npm Usage
 
-# Usage
+```js
+npm i k6-report-html
+```
+
+# Locally Usage
 
 This extension to K6 is intended to be used by adding into your K6 test code (JavaScript) and utilizes the _handleSummary_ callback hook, added to K6 last version.
 When your test completes a HTML file will be written to the filesystem, containing a formatted and easy to consume version of the test summary data
