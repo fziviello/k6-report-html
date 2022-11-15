@@ -24,5 +24,8 @@ test
 webpack.config.js
 webpack.config.js
 _config.yml
-/src
-*/src
+assets
+*/assets
+dist
+*/dist
+src/.eslintrc.json

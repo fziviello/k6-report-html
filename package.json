@@ -1,6 +1,6 @@
 {
   "name": "k6-report-html",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create Report html for k6",
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
     "reporting",
     "report"
   ],
+  "main":"src/report-html.js",
   "scripts": {
     "build": "webpack",
     "lint": "eslint src && prettier --check src",
