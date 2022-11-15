@@ -9,7 +9,7 @@ const version = "2.0.0";
 
 export function reportHTML(data, opts = {}) {
   if (!opts.title) {
-    opts.title = new Date().toISOString().slice(0, 16).replace("T", " ");
+    opts.title = italianTimeFormat(Date.now());
   }
 
   console.log(`[k6-report-html v${version}] Generating report HTML`);
@@ -108,4 +108,30 @@ function countChecks(checks) {
     fails += parseInt(check.fails);
   }
   return { passes, fails };
+}
+
+function italianTimeFormat(dateUTC) {
+  if (dateUTC) {
+    let jsDateFormat = new Date(dateUTC);
+    let fullStringTime = {
+      day: Number(jsDateFormat.getDate() < 10)
+        ? `0${jsDateFormat.getDate()}`
+        : jsDateFormat.getDate(),
+      month:
+        Number(jsDateFormat.getMonth() + 1) < 10
+          ? `0${jsDateFormat.getMonth() + 1}`
+          : jsDateFormat.getMonth() + 1,
+      year: jsDateFormat.getFullYear(),
+      hours:
+        Number(jsDateFormat.getHours()) < 10
+          ? `0${jsDateFormat.getHours()}`
+          : jsDateFormat.getHours(),
+      minutes:
+        Number(jsDateFormat.getMinutes()) < 10
+          ? `0${jsDateFormat.getMinutes()}`
+          : jsDateFormat.getMinutes(),
+    };
+    return `${fullStringTime.day}/${fullStringTime.month}/${fullStringTime.year} ${fullStringTime.hours}:${fullStringTime.minutes}`;
+  }
+  return null;
 }
