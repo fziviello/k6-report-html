@@ -24,7 +24,7 @@ Then outside the test's default function, wrap it with the `handleSummary(data)`
 ```js
 export function handleSummary(data) {
   return {
-    "reports/report.html": reportHTML(data),
+    "report.html": reportHTML(data),
   };
 }
 ```
@@ -34,7 +34,7 @@ The key used in the returned object is the filename that will be written to, and
 The **reportHTML** function accepts an optional options map as a second parameter, with the following properties
 
 ```ts
-title    string  // Title of the report, defaults to current date
+title string  // Title of the report, defaults to current date
 ```
 
 ## Merged outputs
@@ -48,7 +48,7 @@ import { textSummary } from "https://jslib.k6.io/k6-summary/0.0.1/index.js";
 
 export function handleSummary(data) {
   return {
-    "reports/report.html": reportHTML(data),
+    "report.html": reportHTML(data),
     stdout: textSummary(data, { indent: " ", enableColors: true }),
   };
 }
