@@ -60,3 +60,5 @@ export function handleSummary(data) {
 ![main report screenshot](https://github.com/fziviello/k6-report-html/blob/main/screenshots/screen1.png)
 
 ![another report screenshot](https://github.com/fziviello/k6-report-html/blob/main/screenshots/screen2.png)
+
+![another report screenshot](https://github.com/fziviello/k6-report-html/blob/main/screenshots/screen3.png)

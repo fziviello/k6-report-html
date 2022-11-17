@@ -342,7 +342,7 @@
         </div> 
         <!-- ---- end tab ---- -->
         <input type="radio" name="tabs" id="tabtwo">
-        <label for="tabtwo"><i class="fas fa-chart-line"></i> &nbsp; Other Stats</label>
+        <label for="tabtwo"><i class="fas fa-chart-line"></i> &nbsp; Statistics</label>
         <div class="tab">
           <div class="row">
             <% if (data.metrics.checks) { %>
@@ -393,8 +393,8 @@
         <input type="radio" name="tabs" id="tabthree">
         <label for="tabthree"><i class="fas fa-tasks"></i> Checks & Groups</label>
         <div class="tab">
-          <% for(group of data.root_group.groups) { %>
-            <div class="groupTitle"><%= group.name %></div>
+          <% if(data.root_group.checks.length == 0) {} else{ %>
+            <div class="groupTitle">Checks</div>
             <div class="table-responsive">
               <table class="table table-striped">
                 <thead>
@@ -404,7 +404,7 @@
                     <th>Failures</th>
                   </tr>
                 </thead>
-                <% for(check of group.checks) { %>
+                <% for(check of data.root_group.checks) { %>
                   <tr class="checkDetails <% if(check.fails > 0) { %>failed<% } %>">
                     <td width="50%"><%= check.name %></td><td><%= check.passes %></td><td><%= check.fails %></td>
                   </tr>
@@ -412,22 +412,27 @@
               </table>
             </div>
           <% } %>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Check Name</th>
-                  <th>Passes</th>
-                  <th>Failures</th>
-                </tr>
-              </thead>
-              <% for(check of data.root_group.checks) { %>
-                <tr class="checkDetails <% if(check.fails > 0) { %>failed<% } %>">
-                  <td width="50%"><%= check.name %></td><td><%= check.passes %></td><td><%= check.fails %></td>
-                </tr>
-              <% } %>
-            </table>
-          </div>  
+          <% for(group of data.root_group.groups) { %>
+            <% if(group.name == "setup" || group.name == "teardown") {} else{ %>
+                <div class="groupTitle"><%= group.name %></div>
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Check Name</th>
+                        <th>Passes</th>
+                        <th>Failures</th>
+                      </tr>
+                    </thead>
+                    <% for(check of group.checks) { %>
+                      <tr class="checkDetails <% if(check.fails > 0) { %>failed<% } %>">
+                        <td width="50%"><%= check.name %></td><td><%= check.passes %></td><td><%= check.fails %></td>
+                      </tr>
+                    <% } %>
+                  </table>
+                </div>
+            <% } %>
+          <% } %>
         </div> 
         <!-- ---- end tab ---- -->
       </div>
