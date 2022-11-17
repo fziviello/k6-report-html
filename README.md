@@ -24,7 +24,7 @@ Then outside the test's default function, wrap it with the `handleSummary(data)`
 ```js
 export function handleSummary(data) {
   return {
-    "reports/report.html": reportHTML(data),
+    "report.html": reportHTML(data),
   };
 }
 ```
@@ -48,7 +48,7 @@ import { textSummary } from "https://jslib.k6.io/k6-summary/0.0.1/index.js";
 
 export function handleSummary(data) {
   return {
-    "reports/report.html": reportHTML(data),
+    "report.html": reportHTML(data),
     stdout: textSummary(data, { indent: " ", enableColors: true }),
   };
 }
