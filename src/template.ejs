@@ -132,6 +132,10 @@
         position: relative;
         z-index: 20;
       }
+      .groupTitle{
+        padding: 0.75rem;
+        font-size: 1.5rem;
+      }
     </style>
   </head>
   <body>
@@ -390,7 +394,7 @@
         <label for="tabthree"><i class="fas fa-tasks"></i> Checks & Groups</label>
         <div class="tab">
           <% for(group of data.root_group.groups) { %>
-            <h2>&bull; Group - <%= group.name %></h2>
+            <h2>Group - <%= group.name %></h2>
             <div class="table-responsive">
               <table class="table table-striped">
                 <thead>
