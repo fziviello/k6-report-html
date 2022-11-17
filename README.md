@@ -1,5 +1,7 @@
 # K6 Report HTML
 
+[![CI Checks & Build](https://github.com/fziviello/k6-report-html/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/fziviello/k6-report-html/actions/workflows/ci.yaml)
+
 ### Description
 
 The report will show all request groups, checks, HTTP metrics and other statistics
