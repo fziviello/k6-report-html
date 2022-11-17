@@ -394,7 +394,7 @@
         <label for="tabthree"><i class="fas fa-tasks"></i> Checks & Groups</label>
         <div class="tab">
           <% for(group of data.root_group.groups) { %>
-            <h2>Group - <%= group.name %></h2>
+            <div class="groupTitle"><%= group.name %></div>
             <div class="table-responsive">
               <table class="table table-striped">
                 <thead>
