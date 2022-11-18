@@ -71,12 +71,12 @@ export function reportHTML(data, opts = {}) {
     "iterations",
     "data_sent",
     "checks",
+    "http_req_failed",
     "http_reqs",
+    "http_req_duration{expected_response:true}",
     "data_received",
     "vus_max",
     "vus",
-    "http_req_failed",
-    "http_req_duration{expected_response:true}",
   ];
 
   // Render the template
@@ -131,7 +131,7 @@ function italianTimeFormat(dateUTC) {
           ? `0${jsDateFormat.getMinutes()}`
           : jsDateFormat.getMinutes(),
     };
-    return `${fullStringTime.day}/${fullStringTime.month}/${fullStringTime.year} ${fullStringTime.hours}:${fullStringTime.minutes}`;
+    return `Report of ${fullStringTime.day}/${fullStringTime.month}/${fullStringTime.year} at ${fullStringTime.hours}:${fullStringTime.minutes}`;
   }
   return null;
 }

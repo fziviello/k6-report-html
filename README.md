@@ -33,10 +33,11 @@ export function handleSummary(data) {
 
 The key used in the returned object is the filename that will be written to, and can be any valid filename or path  
 
-The **reportHTML** function accepts an optional options map as a second parameter, with the following properties
+The **reportHTML** function takes a map as a second parameter, you can use the title key to customize the title of the report
+
 
 ```ts
-title    string  // Title of the report, defaults to current date
+reportHTML(data,{title:"Custom Title"}),
 ```
 
 ## Merged outputs

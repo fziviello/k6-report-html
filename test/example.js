@@ -16,7 +16,7 @@ const SLEEP = __ENV.SLEEP || 0.5
 
 export function handleSummary(data) {
   return {
-    'reports/report.html': reportHTML(data, { debug: false }),
+    'reports/report.html': reportHTML(data, { debug: false}),
     stdout: textSummary(data, { indent: ' ', enableColors: true }),
   }
 }
@@ -27,9 +27,11 @@ export let options = {
     { duration: RUN_TIME, target: USER_COUNT },
   ],
   thresholds: {
+    http_req_failed: ['rate<0.01'],
     http_req_duration: ['p(95)<1000'],
     iteration_duration: ['max<4000'],
   },
+  vus: 10
 }
 
 export default function () {
